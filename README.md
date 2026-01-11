@@ -61,6 +61,36 @@ To address these risks, this system was built with the following technical goals
 
 ---
 
+![System Architecture Diagram](rag_architecture_diagram.png)
+
+### 🏗️ System Architecture Breakdown
+
+The system is architected as a dual-module platform, combining secure enterprise collaboration (Left) with an advanced neuro-symbolic RAG pipeline (Right).
+
+#### 1. Workspace Sharing & Governance (Left Module)
+* **Role-Based Access Control (RBAC):** A strict permission hierarchy manages data isolation:
+    * **Admins:** Manage workspace lifecycles (Create/Delete) and user role assignments.
+    * **Editors:** Authorized to upload and curate the document knowledge base.
+    * **Viewers:** Restricted to read-only query access to ensure data safety.
+* **Shared Permissions:** All authenticated users can query the system, view uploaded document lists, and manage their workspace membership.
+
+#### 2. Expert RAG Intelligence System (Right Module)
+**A. The Ingestion Pipeline (Top Flow)**
+* **Smart Ingestion:** The system accepts ZIP archives and automatically routes files based on type:
+    * **Documents (PDF, DOCX, PPTX):** Word documents and PowerPoint presentations are first converted to PDF format. These, along with native PDFs, are then processed via a **Vision-First OCR** strategy using **Gemini 2.5 Pro**, converting document images directly into text chunks to preserve complex table structures.
+    * **Spreadsheets:** Parsed via **Pandas** and stored in **Firestore** to maintain row-column integrity.
+* **Vectorization:** Text chunks are passed to the Embedder Model and indexed in **Pinecone** for semantic retrieval.
+
+**B. The Retrieval Agent (Bottom Flow)**
+* **Decision Logic:** A routing node evaluates if the user's query requires external data:
+    * *Yes:* Routes to **DuckDuckGo Search Engine** for real-time web information.
+    * *No:* Triggers the internal RAG pipeline.
+* **Deep Retrieval:**
+    1.  **Hybrid Search:** Fetches relevant contexts from Pinecone.
+    2.  **Cross-Encoder Reranking:** A specialized model re-scores the contexts to filter out noise.
+    3.  **Generation:** The **Gemini 2.5 Pro LLM** synthesizes the final answer using the verified contexts, ensuring zero hallucinations.
+* **Data Persistence:** All interactions and history are securely logged to the **Firebase Database**.
+
 ## 🚀 How to Run Locally
 
 Since this project involves sensitive API keys, they are not included in the repository. Follow these steps to set it up on your local machine.
