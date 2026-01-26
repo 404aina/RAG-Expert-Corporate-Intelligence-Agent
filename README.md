@@ -57,7 +57,7 @@ To address these risks, this system was built with the following technical goals
 
 ---
 
-![System Architecture Diagram](rag_architecture_diagram.png)
+![System Architecture Diagram](rag_architecture_diagram_v2.png)
 
 ### 🏗️ System Architecture Breakdown
 
