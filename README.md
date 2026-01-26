@@ -17,10 +17,6 @@ This repository serves as a **technical showcase** of the system architecture, d
 **If you are a hiring manager:**
 I am happy to discuss the architecture, the technical challenges (e.g., mitigating hallucinations in financial data), and my specific contributions to this project in an interview setting, within the boundaries of my confidentiality agreements.
 
-## 🎥 Demo
-
-📼 (https://via.placeholder.com/800x400?text=Insert+Your+Demo+GIF+Here)
-
 ---
 
 ## 📖 Project Overview
