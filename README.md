@@ -194,6 +194,9 @@ SOFFICE_CMD=soffice   # You don't need to install LibreOffice if using github Co
 ├── .dockerignore          # Files to exclude from Docker build
 └── .gitignore             # Files to exclude from Git
 ```
+---
+💻 MOCK UI Design
+![MOCK UI Diagranm](MOCK_UI.png)
 
 ### 👩‍🦰 Author
 NUR AINA BATRISYIA MOHD FOUZI
