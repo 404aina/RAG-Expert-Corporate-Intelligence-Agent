@@ -195,7 +195,9 @@ SOFFICE_CMD=soffice   # You don't need to install LibreOffice if using github Co
 └── .gitignore             # Files to exclude from Git
 ```
 ---
-💻 MOCK UI Design
+
+### 💻 MOCK UI Design
+
 ![MOCK UI Diagram](MOCK_UI_Design.png)
 
 ### 👩‍🦰 Author
