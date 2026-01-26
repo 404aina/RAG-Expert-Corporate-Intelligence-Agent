@@ -10,7 +10,7 @@
 ---
 ## 🔒 Intellectual Property & Code Access
 
-**Please Note:** This project was developed as a proprietary tool for **Innoveam Sdn Bhd**. Due to Non-Disclosure Agreements (NDA) and Intellectual Property restrictions, the source code cannot be made public.
+**Please Note:** This project was developed as a proprietary tool for **Innoveam Sdn Bhd**. Due to Non-Disclosure Agreements (NDA) and Private & Confidential (P&C) restrictions, the source code cannot be made public.
 
 This repository serves as a **technical showcase** of the system architecture, design decisions, and problem-solving strategies employed during development.
 
