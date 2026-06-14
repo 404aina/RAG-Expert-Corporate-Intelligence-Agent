@@ -196,10 +196,10 @@ SOFFICE_CMD=soffice   # You don't need to install LibreOffice if using github Co
 ```
 ---
 
-## 💻 MOCK UI Design
+## 💻 MOCK UI & UI Design
 
 ![MOCK UI Diagram](MOCK_UI_Design.png)
-
+![A SNIP OF THE UI](.png)
 ### 👩‍🦰 Author
 NUR AINA BATRISYIA MOHD FOUZI
 
